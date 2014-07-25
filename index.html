@@ -1,0 +1,48 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-animate.min.js"></script>
+	<script type="text/javascript"src="js/myApp.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+<div ng-app="myApp" class="main container" ng-controller="statusCtrl">
+    <div class="counter">
+        <div class="minus"><p ng-click="position('minus')">-</p></div>
+        <ul class="counter-indicator">
+            <li class="counter-left" ng-class="{'selected':data.k==1}">&nbsp;</li>
+            <li class="counter1" ng-class="{'selected':data.k==2}">&nbsp;</li>
+            <li class="counter1" ng-class="{'selected':data.k==3}">&nbsp;</li>
+            <li class="counter1" ng-class="{'selected':data.k==4}">&nbsp;</li>
+            <li class="counter-right" ng-class="{'selected':data.k==5}">&nbsp;</li>
+        </ul>
+        <div class="plus"><p ng-click="position('plus')">+</p></div>
+    </div>
+    <br class="clear"/>
+	<div  class="" id="flipper">
+    	<div class="front face">
+    	    <div class="border"></div>
+    		<div ng-class="{'day': !isNight, 'night': isNight}">
+    		</div>
+    		<div class="online-status" ng-class="{'offline': !data.online}"></div>
+    		<div ng-switch on="stat">
+    			<div class="pulse status-a-inactive" ng-hide="stat=='a'" ng-click="flip(true)"></div>
+    			<div class="pulse status-a-active" ng-switch-when="a" ng-click="flip(true)"></div>
+    			<div class="pulse status-b-inactive" ng-hide="stat=='b'" ng-click="flip(true)"></div>
+    			<div class="pulse status-b-active" ng-switch-when="b" ng-click="flip(true)"></div>
+    			<div class="rotate status-a-inactive" ng-hide="stat=='c'" ng-click="flip(true)"></div>
+    			<div class="rotate status-a-active" ng-switch-when="c" ng-click="flip(true)"></div>
+    			<div class="rotate status-b-inactive" ng-hide="stat=='d'" ng-click="flip(true)"></div>
+    			<div class="rotate status-b-active" ng-switch-when="d" ng-click="flip(true)"></div>
+    		</div>
+    	</div>
+    	<div class="back face" ng-click="flip(false)"></div>
+	</div>
+	<div class="name">
+    	    <p>{{data.name}}</p>
+    	</div>
+</div>
+</body>
+</html>
