@@ -1,0 +1,30 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-animate.min.js"></script>
+	<script type="text/javascript"src="js/myApp.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div ng-app="myApp" class="main">
+	<div ng-controller="statusCtrl">
+	    <img class="border" ng-src="images/border.png" />
+		<img class="night"ng-src="images/night.png" />
+		<img class="online-status" ng-class="offline:data.online" ng-src="images/online-status.png" />
+		<select ng-model="stat" ng-options="status.status as status.Name for status in allStatus">
+        </select>
+		<div ng-switch on="stat">
+			<img class="pulse" ng-hide="stat=='a'" ng-src="images/status-a-inactive.png" />
+			<img class="pulse" ng-switch-when="a" ng-src="images/status-a-active.png" />
+			<img class="pulse" ng-hide="stat=='b'" ng-src="images/status-b-inactive.png" />
+			<img class="pulse" ng-switch-when="b" ng-src="images/status-b-active.png" />
+			<img class="rotate" ng-hide="stat=='c'" ng-src="images/status-a-inactive.png" />
+			<img class="rotate" ng-switch-when="c" ng-src="images/status-a-active.png" />
+			<img class="rotate" ng-hide="stat=='d'" ng-src="images/status-b-inactive.png" />
+			<img class="rotate" ng-switch-when="d" ng-src="images/status-b-active.png" />
+		</div>
+	</div>
+</div>
+</body>
+</html>
