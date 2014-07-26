@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
 background:#F0F0F0;
 }
@@ -257,3 +258,123 @@ font-style:italic;
 font-weight:700;
 font-size:30px;
 }
+=======
+.main{
+	position:relative;
+}
+.main img{
+	position: absolute;
+	top:0;
+	left:0;
+}
+img.border{
+top:80px;
+left:85px;
+}
+img.night{
+top:150px;
+left:175px;
+}
+img.online-status{
+top:180px;
+left:215px;
+}
+
+select{
+	position:absolute;
+	top:450px;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.02, 1.02, 1.02);
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.02, 1.02, 1.02);
+    -ms-transform: scale3d(1.02, 1.02, 1.02);
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+  
+    -webkit-transform: rotate(180deg) scale3d(1, 1, 1);
+    transform: rotate(180deg) scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg) scale3d(1.02, 1.02, 1.02);
+    transform: rotate(180deg) scale3d(1.02, 1.02, 1.02);
+  }
+
+  100% {
+    -webkit-transform: rotate(180deg) scale3d(1, 1, 1);
+    transform: rotate(180deg) scale3d(1, 1, 1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+  
+    -webkit-transform: rotate(180deg) scale3d(1, 1, 1);
+    -ms-transform: rotate(180deg) scale3d(1, 1, 1);
+    transform: rotate(180deg) scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg) scale3d(1.02, 1.02, 1.02);
+    -ms-transform: rotate(180deg) scale3d(1.02, 1.02, 1.02);
+    transform: rotate(180deg) scale3d(1.02, 1.02, 1.02);
+  }
+
+  100% {
+    -webkit-transform: rotate(180deg) scale3d(1, 1, 1);
+    -ms-transform: rotate(180deg) scale3d(1, 1, 1);
+    transform: rotate(180deg) scale3d(1, 1, 1);
+  }
+}
+.pulse.ng-enter{
+  -webkit-animation: 0.6s pulse;
+  animation: 0.6s pulse;
+  z-index:100;
+}
+.rotate.ng-enter{
+  -webkit-animation: 0.6s rotate;
+  animation: 0.6s rotate;
+    z-index:100;
+}
+img.rotate{
+-webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.online-status.offline{
+-webkit-filter:grayscale(100%);
+}
+>>>>>>> dd18d110323b3a9b11d7fba8290e26660e5c4693

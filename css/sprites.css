@@ -1,0 +1,46 @@
+.night, .online-status, .border, .status-a-active, .status-a-inactive, .status-b-active, .status-b-inactive{
+	background: url(sprites.png) no-repeat;
+}
+
+.night{
+	background-position: -863px 0;
+	width: 161px;
+	height: 128px;
+}
+
+.online-status{
+	background-position: -1048px -4px ;
+	width: 81px;
+	height: 81px;
+}
+
+.border{
+	background-position: -519px 0;
+	width: 341px;
+	height: 270px;
+}
+
+.status-a-active{
+	background-position: 0 -446px ;
+	width: 511px;
+	height: 431px;
+}
+
+.status-a-inactive{
+	background-position: 0 0;
+	width: 511px;
+	height: 431px;
+}
+
+.status-b-active{
+	background-position: -528px -293px ;
+	width: 511px;
+	height: 431px;
+}
+
+.status-b-inactive{
+	background-position: -1151px -4px ;
+	width: 511px;
+	height: 431px;
+}
+
