@@ -26,15 +26,18 @@
     	    <div class="border"></div>
     		<div ng-class="{'day': !isNight, 'night': isNight}">
     		</div>
+    		<div>
+    			<select ng-model="stat" ng-options="status.Name for status in allStatus" selected></select>
+    		</div>
     		<div class="online-status" ng-class="{'offline': !data.online}"></div>
-    		<div ng-switch on="stat">
-    			<div class="pulse status-a-inactive" ng-hide="stat=='a'" ng-click="flip(true)"></div>
+    		<div ng-switch on="stat.status">
+    			<div class="pulse status-a-inactive" ng-hide="stat.status=='a'" ng-click="flip(true)"></div>
     			<div class="pulse status-a-active" ng-switch-when="a" ng-click="flip(true)"></div>
-    			<div class="pulse status-b-inactive" ng-hide="stat=='b'" ng-click="flip(true)"></div>
+    			<div class="pulse status-b-inactive" ng-hide="stat.status=='b'" ng-click="flip(true)"></div>
     			<div class="pulse status-b-active" ng-switch-when="b" ng-click="flip(true)"></div>
-    			<div class="rotate status-a-inactive" ng-hide="stat=='c'" ng-click="flip(true)"></div>
+    			<div class="rotate status-a-inactive" ng-hide="stat.status=='c'" ng-click="flip(true)"></div>
     			<div class="rotate status-a-active" ng-switch-when="c" ng-click="flip(true)"></div>
-    			<div class="rotate status-b-inactive" ng-hide="stat=='d'" ng-click="flip(true)"></div>
+    			<div class="rotate status-b-inactive" ng-hide="stat.status=='d'" ng-click="flip(true)"></div>
     			<div class="rotate status-b-active" ng-switch-when="d" ng-click="flip(true)"></div>
     		</div>
     	</div>

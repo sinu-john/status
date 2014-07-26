@@ -35,7 +35,7 @@ module.factory('service',function(){
 				case 'c':data.status.c="yellow";break;
 				case 'd':data.status.d="yellow";break;
 				default:data.status.a="yellow";
-				console.log(stat);
+				console.log("blah"+stat);
 			}
 		},
 		isNight:function(){
@@ -53,15 +53,16 @@ module.factory('service',function(){
 });
 
 module.controller('statusCtrl',function($scope,$filter,service){
-	$scope.stat="a";
 	$scope.allStatus=[{'Name':'Status A','status':'a'},
 					{'Name':'Status B','status':'b'},
 					{'Name':'Status C','status':'c'},
 					{'Name':'Status D','status':'d'}];
-	service.setStatus($scope.stat);
+	$scope.stat=$scope.allStatus[0];
+					//console.log($scope.stat);
+	service.setStatus($scope.stat.status);
 	$scope.data=service.getData();
 	$scope.isNight=service.isNight();
-	console.log($scope.isNight);
+	//console.log($scope.isNight);
 	$scope.flip=function(flip){
 	var a=document.getElementById('flipper');
         if(flip){
