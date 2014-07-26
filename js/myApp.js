@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var module=angular.module('myApp',['ngAnimate']);
 
 module.factory('service',function(){
@@ -139,5 +139,4 @@ module.controller('statusCtrl',function($scope,$filter,service){
 					{'Name':'Status D','status':'d'}];
 	$scope.data=service.setStatus($scope.stat);
 	$scope.data=service.getData();
->>>>>>> dd18d110323b3a9b11d7fba8290e26660e5c4693
 });
